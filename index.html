@@ -328,11 +328,13 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Highlights</h2>
         <div class="content has-text-justified">
-          <p>
-            Recent advances in robot manipulation increasingly leverage Vision–Language Models (VLMs) for high-level reasoning, such as decomposing task instructions into sequential action plans expressed in natural language that guide downstream low-level motor execution. However, current benchmarks do not assess whether these plans are spatially executable, particularly in specifying the exact spatial locations where the robot should interact to execute the plan, limiting evaluation of real-world manipulation capability. To bridge this gap, we define a novel task of grounded planning and introduce GroundedPlanBench, a newly curated benchmark for spatially grounded long-horizon action planning in the wild. GroundedPlanBench jointly evaluates hierarchical sub-action planning and spatial action grounding (where to act), enabling systematic assessment of whether generated sub-actions are spatially executable for robot manipulation. We further introduce Video-to-Spatially Grounded Planning (V2GP), an automated data generation framework that leverages real-world robot video demonstrations to improve spatially grounded long-horizon planning. Our evaluations reveal that spatially grounded long-horizon planning remains a major bottleneck for current VLMs. Our results demonstrate that V2GP provides a promising approach for improving both action planning and spatial grounding performance, validated on our benchmark as well as through real-world robot manipulation experiments, advancing progress toward spatially actionable planning.
-          </p>
+          <ul>
+            <li>We introduce a benchmark <strong>GroundedPlanBench</strong> that jointly evaluates hierarchical action planning and spatial action grounding in the wild, enabling evaluation of whether VLM-generated plans are spatially feasible for robot manipulation.</li>
+            <li>We propose an automated training data collection framework from robot video demonstrations that leverages VLM video understanding and grounding capabilities to automatically discover hierarchical sub-action plans and spatially grounded robot–object interactions from long-horizon demonstrations, improving spatially grounded planning in VLM-as-Planner.</li>
+            <li>Through systematic evaluation of closed-source and open-source VLMs, we show that spatially grounded long-horizon planning remains a major challenge in current VLM-as-Planner, and demonstrate that <strong>V2GP</strong> significantly improves planning and grounding performance, validated both on our benchmark and through real-world robot manipulation experiments.</li>
+          </ul>
         </div>
       </div>
     </div>
