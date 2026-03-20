@@ -571,6 +571,8 @@
         },
       };
 
+      const yMaxByMode = { explicit: 80, implicit: 60 };
+
       function makeDatasets(entries) {
         return entries.map(e => ({
           label: e.label,
@@ -601,8 +603,11 @@
         mode = newMode;
         document.querySelectorAll('.results-toggle button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        const yMax = yMaxByMode[mode];
         tsrChart.data.datasets = makeDatasets(data[mode].tsr);
         arrChart.data.datasets = makeDatasets(data[mode].arr);
+        tsrChart.options.scales.y.max = yMax;
+        arrChart.options.scales.y.max = yMax;
         tsrChart.update();
         arrChart.update();
       }
